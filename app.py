@@ -26,7 +26,7 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 
 
 def GPT_response(text):
-    with open(r"E:\download\chatgpt-retrieval-main\data.txt", "r") as file:
+    with open(r"E:\download\raw\linebot_openai-master\data.txt", "r") as file:
         data = file.read()
     prompt = f"{data} {text}"
     response = openai.Completion.create(model="text-davinci-003", prompt=prompt, temperature=0.5, max_tokens=500)
